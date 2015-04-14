@@ -1,0 +1,13 @@
+.ycon{ background:url("ycon.png") top left no-repeat; }
+.ycon-mascote-footer{ width:330px; height:300px; background-position:-1px -1px; }
+.ycon-enviar{ width:177px; height:105px; background-position:-1px -302px; }
+.ycon-marker{ width:91px; height:85px; background-position:-179px -302px; }
+.ycon-phone{ width:91px; height:85px; background-position:-1px -408px; }
+.ycon-arrow-down{ width:90px; height:80px; background-position:-93px -408px; }
+.ycon-cycle-next{ width:63px; height:66px; background-position:-184px -408px; }
+.ycon-cycle-prev{ width:63px; height:66px; background-position:-248px -408px; }
+.ycon-plus{ width:63px; height:66px; background-position:-1px -494px; }
+.ycon-twitter{ width:41px; height:39px; background-position:-271px -302px; }
+.ycon-instagram{ width:44px; height:38px; background-position:-65px -494px; }
+.ycon-facebook{ width:44px; height:38px; background-position:-110px -494px; }
+

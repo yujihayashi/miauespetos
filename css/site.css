@@ -1,0 +1,746 @@
+/*
+FUNÇÕES PADRÕES START
+*********************************************************************/
+.clear,
+.first {
+  clear: both;
+}
+/*********************************************************************
+FUNÇÕES PADRÕES END
+*/
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
+.container {
+  max-width: none !important;
+  width: 960px;
+}
+.navbar-nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*/
+/* Reset the container */
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+.navbar-brand {
+  margin-left: -15px;
+}
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #812d2a !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
+::selection {
+  background-color: #812d2a;
+  color: #FFF;
+}
+::-moz-selection {
+  background-color: #812d2a;
+  color: #FFF;
+}
+small {
+  display: inline-block;
+  line-height: 1.1;
+}
+textarea {
+  resize: vertical;
+}
+a,
+button {
+  transition: all 0.25s ease 0s;
+}
+/*
+FONTS START
+**********************************************************************************************/
+.extra-footer {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+.box-contato small {
+  font-family: 'latolight', Arial, sans-serif;
+  font-weight: normal;
+}
+.modal-cardapio h5,
+.modal-cardapio h6,
+.box-contato .blue {
+  font-family: 'latobold_italic', Arial, sans-serif;
+  font-weight: normal;
+}
+.site-header {
+  font-family: 'bangersregular', Arial, sans-serif;
+  font-weight: normal;
+}
+.box-contato .form-control,
+.footer-header,
+.box-contato .page-left,
+.box-cardapio .page-desc,
+.lista-cardapio .title,
+.box-sobre .page-left {
+  font-family: 'komika_titleregular', Arial, sans-serif;
+  font-weight: normal;
+}
+/**********************************************************************************************
+FONTS END
+*/
+/*
+ESTRUTURA START
+**********************************************************************************************/
+.extra-header,
+.extra-central,
+.extra-footer {
+  min-width: 960px;
+}
+.extra-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: url(../imagem/site/bg-header.png) no-repeat center top;
+}
+.extra-header .site-header {
+  height: 276px;
+}
+.extra-header .navbar {
+  border: 0;
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: 28px;
+}
+.extra-header .navbar-nav {
+  padding-top: 156px;
+}
+.extra-header .navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+.extra-header .navbar-nav > li a {
+  padding: 30px 15px;
+}
+.extra-header .menu-left,
+.extra-header .menu-right {
+  width: 350px;
+}
+.extra-header .menu-left {
+  text-align: right;
+}
+.extra-header .telefone {
+  display: block;
+  position: absolute;
+  right: 41px;
+  top: 48px;
+}
+.extra-header .container {
+  position: relative;
+}
+.extra-footer {
+  background: #030404;
+  font-size: 12px;
+  color: #868686;
+}
+.extra-footer .site-footer {
+  padding: 24px 0;
+}
+/**********************************************************************************************
+ESTRUTURA END
+*/
+/*
+CLASSES START
+**********************************************************************************************/
+[class^='lista-'],
+[class^='lista-'],
+[class^='menu-'],
+[class^='menu-'] ul,
+.cycle-slideshow {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.btn-gray {
+  background: #EEE;
+  color: #C93F2A;
+}
+.btn-rounded {
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
+}
+.page > .bg {
+  background: no-repeat center top;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.page .container {
+  z-index: 2;
+  position: relative;
+}
+.box-home {
+  background: url(../imagem/site/bg-cidade.jpg) no-repeat center top;
+  position: relative;
+  z-index: 1;
+  height: 1292px;
+}
+.box-home .bg {
+  background: url(../imagem/site/bg-home.png) no-repeat center top;
+  height: 1292px;
+  top: 0;
+}
+.box-home .container {
+  padding-top: 187px;
+}
+.box-banner {
+  padding: 130px 136px 0px;
+  height: 442px;
+  background: url(../imagem/site/bg-banner.png) no-repeat center top;
+}
+.box-banner .cycle-slideshow,
+.box-banner .cycle-slideshow li,
+.box-banner .mask,
+.box-banner .imagem,
+.box-banner .link {
+  width: 665px;
+  height: 265px;
+  overflow: hidden;
+}
+.box-banner .cycle-slideshow {
+  margin-bottom: 15px;
+}
+.box-banner .link {
+  display: block;
+  position: relative;
+}
+.box-banner .mask,
+.box-banner .imagem {
+  display: block;
+}
+.box-banner .mask {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: url(../imagem/site/bg-banner-mask.png) no-repeat left top;
+}
+.box-banner .imagem {
+  position: relative;
+  z-index: 1;
+}
+.box-banner .cycle-nav {
+  width: 100%;
+  text-align: center;
+}
+.box-banner .cycle-nav span {
+  background: url(../imagem/site/cycle-nav.png) no-repeat left top;
+  width: 16px;
+  height: 15px;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+.box-banner .cycle-nav span + span {
+  margin-left: 9px;
+}
+.box-banner .cycle-nav span.cycle-pager-active {
+  background-position: right top;
+}
+.box-sobre {
+  background: url(../imagem/site/bg-sobre.png) no-repeat center top;
+  position: relative;
+  z-index: 2;
+  margin-top: -540px;
+  height: 1486px;
+}
+.box-sobre .bg {
+  height: 996px;
+  background: url(../imagem/site/bg-sobre-extra.png) no-repeat center top;
+  bottom: -234px;
+}
+.box-sobre .container {
+  padding-top: 420px;
+}
+.box-sobre .page-left {
+  color: #FFF;
+  font-size: 22px;
+}
+.box-sobre .page-left .content {
+  padding: 0 0 0 10px;
+}
+.box-sobre .onde-fica {
+  display: block;
+  text-indent: -1000px;
+  overflow: hidden;
+  width: 418px;
+  height: 448px;
+}
+.box-cardapio {
+  background: url(../imagem/site/bg-cardapio.png) no-repeat center top;
+  position: relative;
+  z-index: 3;
+  margin-top: -516px;
+  height: 1488px;
+}
+.box-cardapio > .bg {
+  height: 1190px;
+  background: url(../imagem/site/bg-cardapio-extra.png) no-repeat center top;
+  bottom: -134px;
+}
+.box-cardapio .container {
+  padding-top: 568px;
+  text-align: center;
+}
+.box-cardapio .media-heading {
+  line-height: 1;
+}
+.box-cardapio .page-desc {
+  color: #999;
+  font-size: 20px;
+  margin: -15px 0 30px;
+}
+.box-cardapio .lista-cardapio {
+  margin: 0 4px 0;
+}
+.box-promocoes {
+  background: url(../imagem/site/bg-promocoes.png) no-repeat center top;
+  position: relative;
+  z-index: 4;
+  margin-top: -406px;
+  height: 898px;
+  text-align: center;
+}
+.box-promocoes > .bg {
+  height: 898px;
+}
+.box-promocoes .container {
+  padding-top: 270px;
+}
+.box-promocoes .media-heading {
+  color: #FFBF00;
+}
+.box-promocoes .box-cycle {
+  padding: 0 32px;
+  position: relative;
+}
+.box-promocoes .box-cycle .cycle-prev,
+.box-promocoes .box-cycle .cycle-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -33px;
+  z-index: 2;
+}
+.box-promocoes .box-cycle .cycle-prev.disabled,
+.box-promocoes .box-cycle .cycle-next.disabled {
+  -webkit-opacity: .3;
+  -moz-opacity: .3;
+  -ms-opacity: .3;
+  -o-opacity: .3;
+  opacity: .3;
+  filter: alpha(opacity=30);
+}
+.box-promocoes .box-cycle .cycle-prev {
+  left: 0;
+}
+.box-promocoes .box-cycle .cycle-next {
+  right: 0;
+}
+.box-promocoes .cycle-slideshow {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.box-promocoes .cycle-slideshow li {
+  width: 290px;
+}
+.box-promocoes .cycle-slideshow li * {
+  white-space: normal;
+}
+.box-promocoes .cycle-slideshow li,
+.box-promocoes .cycle-slideshow li a {
+  color: #FFF;
+}
+.box-promocoes .cycle-slideshow li .content {
+  width: 272px;
+  margin: 0 auto;
+  height: 288px;
+  background: url(../imagem/site/bg-red.png) no-repeat left top;
+  padding: 40px 40px 0;
+}
+.box-promocoes .cycle-slideshow li .imagem {
+  height: 90px;
+  margin: 0 0 8px;
+}
+.box-promocoes .cycle-slideshow li .imagem .imagem-content {
+  max-width: 97%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.box-promocoes .cycle-slideshow li .imagem img {
+  max-height: 90px;
+  width: 100%;
+}
+.box-promocoes .cycle-slideshow li .desc {
+  font-size: 16px;
+  line-height: 1.2;
+}
+.box-promocoes .cycle-slideshow li:nth-child(2) .content,
+.box-promocoes .cycle-slideshow li:nth-child(5) .content,
+.box-promocoes .cycle-slideshow li:nth-child(8) .content,
+.box-promocoes .cycle-slideshow li:nth-child(11) .content {
+  background-image: url(../imagem/site/bg-blue.png);
+}
+.box-promocoes .cycle-slideshow li:nth-child(3) .content,
+.box-promocoes .cycle-slideshow li:nth-child(6) .content,
+.box-promocoes .cycle-slideshow li:nth-child(9) .content,
+.box-promocoes .cycle-slideshow li:nth-child(12) .content {
+  background-image: url(../imagem/site/bg-yellow.png);
+}
+.box-contato {
+  background: url(../imagem/site/bg-footer.png) no-repeat center top;
+  position: relative;
+  z-index: 5;
+  margin-top: -142px;
+  height: 793px;
+}
+.box-contato > .bg,
+.box-contato > .container {
+  height: 793px;
+}
+.box-contato .container {
+  padding-top: 280px;
+  position: relative;
+}
+.box-contato .container .row {
+  position: relative;
+  z-index: 2;
+}
+.box-contato .media-heading {
+  line-height: .8;
+  color: #FFF;
+  text-shadow: -5px 5px 0 #00536f;
+}
+.box-contato .page-left {
+  font-size: 20px;
+  color: #FFF;
+}
+.box-contato .line-phone {
+  font-size: 32px;
+  line-height: 1;
+}
+.box-contato .line-address {
+  font-size: 24px;
+  line-height: 1.1;
+}
+.box-contato .hora {
+  font-size: 20px;
+}
+.box-contato small {
+  font-size: 16px;
+}
+.box-contato .media-list .media .media-body {
+  padding-left: 10px;
+}
+.box-contato .page-right {
+  height: 300px;
+}
+.box-contato .page-right,
+.box-contato .page-right a {
+  color: #FFF;
+}
+.box-contato .mascote {
+  position: absolute;
+  bottom: -19px;
+  left: 322px;
+  z-index: 1;
+}
+.box-contato .footer-header {
+  display: block;
+  font-size: 24px;
+  margin: 0 0 5px;
+}
+.box-contato .menu-footer {
+  font-size: 16px;
+}
+.box-contato .menu-footer > li + li {
+  margin-top: 5px;
+}
+.box-contato .social-footer a + a {
+  margin-left: 1px;
+}
+.box-contato .hora {
+  line-height: 1;
+}
+.box-contato .blue {
+  color: #8CE2FF;
+  font-size: 18px;
+}
+.balao {
+  background: url(../imagem/site/bg-balao-top.png) no-repeat left top;
+  padding-top: 16px;
+  width: 480px;
+}
+.balao .extra-1 {
+  background: url(../imagem/site/bg-balao-bottom.png) no-repeat left bottom;
+  padding-bottom: 116px;
+  position: relative;
+}
+.balao .extra-2 {
+  background: url(../imagem/site/bg-balao.jpg) repeat-y left;
+  padding: 0 0 15px;
+}
+.balao .form-group {
+  margin-bottom: 5px;
+}
+.balao .form-control {
+  background: none;
+  border: 0;
+  color: #464637;
+  font-size: 16px;
+}
+.balao .form-control:focus {
+  box-shadow: none;
+}
+.balao textarea.form-control {
+  height: 84px;
+  max-height: 84px;
+  font-size: 24px;
+}
+.balao button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 15px;
+  bottom: 30px;
+}
+.cycle-nav span {
+  display: inline-block;
+  cursor: pointer;
+}
+.form-control {
+  box-shadow: none;
+}
+.imagem {
+  display: inline-block;
+  overflow: hidden;
+  max-width: 100%;
+}
+.imagem-rounded {
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
+}
+.inline-block {
+  display: inline-block;
+}
+[class^='ycon-'],
+[class*='ycon-'] {
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url(../imagem/site/ycon.png);
+}
+.lista-cardapio > li {
+  float: left;
+  margin: 0 2px 5px;
+}
+.lista-cardapio > li:nth-child(2) .mask {
+  background-position: -253px 0;
+}
+.lista-cardapio > li:nth-child(3) .mask {
+  background-position: -506px 0;
+}
+.lista-cardapio > li:nth-child(4) .mask {
+  background-position: 0px -214px;
+}
+.lista-cardapio > li:nth-child(5) .mask {
+  background-position: -253px -214px;
+}
+.lista-cardapio > li:nth-child(6) .mask {
+  background-position: -506px -214px;
+}
+.lista-cardapio .link,
+.lista-cardapio .mask,
+.lista-cardapio .content,
+.lista-cardapio .imagem,
+.lista-cardapio .bg,
+.lista-cardapio .text,
+.lista-cardapio .title {
+  display: block;
+}
+.lista-cardapio .link,
+.lista-cardapio .content,
+.lista-cardapio .mask,
+.lista-cardapio .imagem,
+.lista-cardapio .bg,
+.lista-cardapio .text,
+.lista-cardapio > li {
+  width: 253px;
+  height: 214px;
+  overflow: hidden;
+}
+.lista-cardapio .link {
+  position: relative;
+  z-index: 1;
+  color: #FFF;
+  text-align: center;
+  transition: none;
+}
+.lista-cardapio .mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background: url(../imagem/site/bg-cardapio-mask.png) no-repeat left top;
+}
+.lista-cardapio .content {
+  position: relative;
+  z-index: 1;
+}
+.lista-cardapio .imagem {
+  position: relative;
+  z-index: 1;
+}
+.lista-cardapio .bg {
+  background: rgba(217, 54, 0, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+}
+.lista-cardapio .text {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.lista-cardapio .text-content {
+  display: inline-block;
+  width: 97%;
+  margin-left: -5px;
+  vertical-align: middle;
+  transition: all 0.25s ease 0s;
+}
+.lista-cardapio .title {
+  font-size: 30px;
+  text-shadow: 0 0 30px #56250e;
+}
+.lista-cardapio .plus {
+  height: 0;
+  opacity: 0;
+}
+.modal-content {
+  box-shadow: -7px 10px 0 rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: #EFF0E0;
+}
+.modal-cardapio .media-heading {
+  font-size: 16px;
+}
+.modal-cardapio .media-list .media + .media {
+  margin-top: 10px;
+}
+.space {
+  width: 1%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.relative {
+  position: relative;
+}
+/**********************************************************************************************
+CLASSES END
+*/
+/*
+JQUERY UI START
+**********************************************************************************************/
+/**********************************************************************************************
+JQUERY UI END
+*/
+@media (max-width: 767px) {
+  /*    .site-geral:before {content:"TABLET";}*/
+}
+@media (max-width: 480px) {
+  /*#GERAL:before {content:"MOBILE";}*/
+}
+@media (min-width: 981px) {
+  .box-promocoes .box-cycle .cycle-prev {
+    left: -30px;
+  }
+  .box-promocoes .box-cycle .cycle-next {
+    right: -30px;
+  }
+  /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+}

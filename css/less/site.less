@@ -1,0 +1,310 @@
+@primary-color: #812d2a; 
+@secondary-color: #089bdf;  
+@third-color: #b6967e;  
+/*
+FUNÇÕES PADRÕES START
+*********************************************************************/
+.border-radius(@style) {
+    -webkit-border-radius: @style;
+    -moz-border-radius: @style;
+    border-radius: @style;
+}
+.box-shadow(@style, @c) when (iscolor(@c)) {
+    -webkit-box-shadow: @style @c;
+    box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+    .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+.clear, .first{
+    clear:both;
+}
+/*********************************************************************
+FUNÇÕES PADRÕES END
+*/
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
+.container {max-width: none !important;width: 960px;}
+.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: @primary-color !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
+::selection {background-color: @primary-color;color: #FFF;}
+::-moz-selection {background-color: @primary-color;color: #FFF;}
+small {display: inline-block;line-height: 1.1;}
+textarea {resize:vertical;}
+a, button  {transition: all 0.25s ease 0s;}
+/*
+FONTS START
+**********************************************************************************************/
+.extra-footer {font-family: Arial, sans-serif;font-weight: normal;}
+.box-contato small {font-family: 'latolight', Arial, sans-serif;font-weight: normal;}
+.modal-cardapio h5, .modal-cardapio h6, .box-contato .blue {font-family: 'latobold_italic', Arial, sans-serif;font-weight: normal;}
+.site-header {font-family: 'bangersregular', Arial, sans-serif;font-weight: normal;}
+.box-contato .form-control, .footer-header, .box-contato .page-left, .box-cardapio .page-desc, .lista-cardapio .title, .box-sobre .page-left {font-family: 'komika_titleregular', Arial, sans-serif;font-weight: normal;}
+/**********************************************************************************************
+FONTS END
+*/
+/*
+ESTRUTURA START
+**********************************************************************************************/
+.extra-header, .extra-central, .extra-footer {min-width: 960px;}
+.extra-header {
+    position: absolute;left: 0;right: 0;top: 0;z-index: 10;background: url(../imagem/site/bg-header.png) no-repeat center top;
+    .site-header {height: 276px;}
+    .navbar {border:0;margin:0;.border-radius(0);font-size: 28px;}
+    .navbar-nav {
+        padding-top:156px;
+        > li {
+            float:none;display: inline-block;
+            a {padding:30px 15px;}
+        }
+    }
+    .menu-left, .menu-right {width: 350px;}
+    .menu-left {
+        text-align: right;
+    }
+    .telefone {display: block;position: absolute;right: 41px;top: 48px;}
+    .container {position: relative;}
+}
+.extra-central {
+	.site-central {}
+}
+.extra-footer {
+    background: #030404;font-size: 12px;color: #868686;
+    .site-footer {    padding:24px 0;}
+}
+/**********************************************************************************************
+ESTRUTURA END
+*/
+/*
+CLASSES START
+**********************************************************************************************/
+[class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
+.btn-gray {background: #EEE;color:#C93F2A;}
+.btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+
+.page {
+    > .bg {background:no-repeat center top;position: absolute;left: 0;right: 0;z-index: 1;}
+    .container {z-index: 2;position: relative;}
+}
+.box-home {
+    background: url(../imagem/site/bg-cidade.jpg) no-repeat center top;position: relative;z-index: 1;height: 1292px;
+    .bg {background: url(../imagem/site/bg-home.png) no-repeat center top;height: 1292px;top: 0;}
+    .container {padding-top:187px;}
+}
+.box-banner {
+    padding:130px 136px 0px;height: 442px;background: url(../imagem/site/bg-banner.png) no-repeat center top;
+    .cycle-slideshow, .cycle-slideshow li, .mask, .imagem, .link {width: 665px;height: 265px;overflow: hidden;}
+    .cycle-slideshow {margin-bottom: 15px;}
+    .link {display: block;position: relative;}
+    .mask, .imagem {display: block;}
+    .mask {position: absolute;z-index: 2;left: 0;right: 0;top: 0;background:url(../imagem/site/bg-banner-mask.png) no-repeat left top;}
+    .imagem {position: relative;z-index: 1;}
+    .cycle-nav {
+        width: 100%;text-align: center;
+        span {
+            background: url(../imagem/site/cycle-nav.png) no-repeat left top;width: 16px;height: 15px;text-indent: -1000px;overflow: hidden;
+            + span {margin-left: 9px;}
+            &.cycle-pager-active {background-position: right top;}
+        }
+    }
+}
+.box-sobre {
+    background: url(../imagem/site/bg-sobre.png) no-repeat center top;position: relative;z-index: 2;margin-top:-540px;height: 1486px;
+    .bg {height: 996px;background: url(../imagem/site/bg-sobre-extra.png) no-repeat center top;bottom:-234px;}
+    .container {padding-top:420px;}
+    .page-left {
+        color: #FFF;font-size: 22px;
+        .content {padding:0 0 0 10px;}
+    }
+    .onde-fica {display: block;text-indent: -1000px;overflow: hidden;width: 418px;height: 448px;}
+}
+.box-cardapio {
+    background: url(../imagem/site/bg-cardapio.png) no-repeat center top;position: relative;z-index: 3;margin-top:-516px;height: 1488px;
+    > .bg {height: 1190px;background: url(../imagem/site/bg-cardapio-extra.png) no-repeat center top;bottom:-134px;}
+    .container {padding-top:568px;text-align: center;}
+    .media-heading {line-height: 1;}
+    .page-desc {color: #999;font-size: 20px;margin:-15px 0 30px;}
+    .lista-cardapio {
+        margin:0 4px 0;
+    }
+}
+.box-promocoes {
+    background: url(../imagem/site/bg-promocoes.png) no-repeat center top;position: relative;z-index: 4;margin-top:-406px;height: 898px;text-align: center;
+    > .bg {height: 898px;}
+    .container {padding-top:270px;}
+    .media-heading {color: #FFBF00;}
+    .box-cycle {
+        padding:0 32px;position: relative;
+        .cycle-prev, .cycle-next {
+            position: absolute;top: 50%;margin-top:-33px;z-index: 2;
+            &.disabled {-webkit-opacity: .3;-moz-opacity: .3;-ms-opacity: .3;-o-opacity: .3;opacity: .3;filter:alpha(opacity=30);}
+        }
+        .cycle-prev {left: 0;}
+        .cycle-next {right: 0;}
+    }
+    .cycle-slideshow {
+        width: 100%;position: relative;z-index: 1;
+        li {
+            width: 290px;
+            * {white-space: normal;}
+            &, a {color: #FFF;}
+            .content {width: 272px;margin:0 auto;height: 288px;background: url(../imagem/site/bg-red.png) no-repeat left top;padding:40px 40px 0;}
+            .imagem {
+                height: 90px;margin:0 0 8px;
+                .imagem-content {max-width: 97%;display: inline-block;vertical-align: middle;}
+                img {max-height: 90px;width: 100%;}
+            }
+            .desc {font-size: 16px;line-height: 1.2;}
+            &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11) {
+                .content {background-image:url(../imagem/site/bg-blue.png);}
+            }
+            &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12) {
+                .content {background-image:url(../imagem/site/bg-yellow.png);}
+            }
+        }
+    }
+}
+.box-contato {
+    background: url(../imagem/site/bg-footer.png) no-repeat center top;position: relative;z-index: 5;margin-top:-142px;height: 793px;
+    > .bg, > .container {height: 793px;}
+    .container {
+        padding-top:280px;position: relative;
+        .row {position: relative;z-index: 2;}
+    }
+    .media-heading {line-height: .8;color: #FFF;text-shadow:-5px 5px 0 #00536F;}
+    .page-left {font-size: 20px;color: #FFF;}
+    .line-phone {font-size: 32px;line-height: 1;}
+    .line-address {font-size: 24px;line-height: 1.1;}
+    .hora {font-size: 20px;}
+    small {font-size: 16px;}
+    .media-list {
+        .media {
+            .media-body {padding-left:10px;}
+        }
+    }
+    .page-right {
+        height: 300px;
+        &, a {color: #FFF;}
+    }
+    .mascote {position: absolute;bottom: -19px;left: 322px;z-index: 1;}
+    .footer-header {display: block;font-size: 24px;margin:0 0 5px;}
+    .menu-footer {
+        font-size: 16px;
+        > li {
+            + li {margin-top:5px;}
+        }
+    }
+    .social-footer {
+        a {
+            + a {margin-left: 1px;}
+        }
+    }
+    .hora {line-height: 1;}
+    .blue {color: #8CE2FF;font-size: 18px;}
+}
+.balao {
+    background: url(../imagem/site/bg-balao-top.png) no-repeat left top;padding-top:16px;width: 480px;
+    .extra-1 {background: url(../imagem/site/bg-balao-bottom.png) no-repeat left bottom;padding-bottom: 116px;position: relative;}
+    .extra-2 {background: url(../imagem/site/bg-balao.jpg) repeat-y left;padding:0 0 15px;}
+    .form-group {margin-bottom: 5px;}
+    .form-control {
+        background: none;border:0;color: #464637;font-size: 16px;
+        &:focus {box-shadow:none;}
+    }
+    textarea.form-control {height: 84px;max-height: 84px;font-size: 24px;}
+    button {background-color: transparent;border:0;position: absolute;right: 15px;bottom: 30px;}
+}
+
+.cycle-nav {
+	span {display: inline-block;cursor: pointer;}
+}
+
+.form-control {box-shadow:none;}
+
+.imagem {display: inline-block;overflow: hidden;max-width: 100%;}
+.imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.inline-block {display:inline-block;}
+[class^='ycon-'], [class*='ycon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/ycon.png);}
+
+.lista-cardapio {
+    > li {
+        float: left;margin:0 2px 5px;
+        &:nth-child(2) {
+            .mask {background-position:-253px 0;}
+        }
+        &:nth-child(3) {
+            .mask {background-position:-506px 0;}
+        }
+        &:nth-child(4) {
+            .mask {background-position:0px -214px;}
+        }
+        &:nth-child(5) {
+            .mask {background-position:-253px -214px;}
+        }
+        &:nth-child(6) {
+            .mask {background-position:-506px -214px;}
+        }
+    }
+    .link, .mask, .content, .imagem, .bg, .text, .title {display: block;}
+    .link, .content, .mask, .imagem, .bg, .text, > li {width: 253px;height: 214px;overflow: hidden;}
+    .link {position: relative;z-index: 1;color: #FFF;text-align: center;transition:none;}
+    .mask {position: absolute;left: 0;right: 0;top: 0;z-index: 2;background: url(../imagem/site/bg-cardapio-mask.png) no-repeat left top;}
+    .content {position: relative;z-index: 1;}
+    .imagem {position: relative;z-index: 1;}
+    .bg {background: rgba(217, 54, 0, .7);position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 2;display: none;}
+    .text {position: absolute;z-index: 3;left: 0;top: 0;right: 0;}
+    .text-content {display:inline-block;width: 97%;margin-left: -5px;vertical-align: middle;transition:all 0.25s ease 0s;}
+    .title {font-size: 30px;text-shadow:0 0 30px rgba(86, 37, 14, 1);}
+    .plus {height: 0;opacity:0;}
+}
+
+.modal-content {box-shadow:-7px 10px 0 rgba(0, 0, 0, 0.5);.border-radius(0);background: #EFF0E0;}
+.modal-cardapio {
+    .media-heading {font-size: 16px;}
+    .media-list {
+        .media {
+            + .media {margin-top: 10px;}
+        }
+    }
+}
+
+.space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
+.relative {position: relative;}
+/**********************************************************************************************
+CLASSES END
+*/
+/*
+JQUERY UI START
+**********************************************************************************************/
+
+/**********************************************************************************************
+JQUERY UI END
+*/
+@media print {
+
+}
+@media (max-width: 767px) {
+   /*    .site-geral:before {content:"TABLET";}*/
+}
+@media (max-width: 480px) {
+   /*#GERAL:before {content:"MOBILE";}*/
+}
+@media (min-width: 768px) and (max-width: 980px) {
+
+}
+@media (min-width: 981px) {
+    .box-promocoes {
+        .box-cycle {
+            .cycle-prev {left: -30px;}
+            .cycle-next {right: -30px;}
+        }
+    }
+   /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+}

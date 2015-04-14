@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Miau Espetos</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=960, user-scalable=yes">
+	<link rel="shortcut icon" href="/imagem/favicon.png" type="image/png" />
+	<meta name="author" content="Libra Design" />
+	<meta name="keywords" content="" />
+	<meta property="og:description" content="" />
+	<meta name="description" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="/imagem/logo-mini.jpg" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:type" content="website" />
+	<link rel="stylesheet" href="/library/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/fonts/stylesheet.css">
+	<link rel="stylesheet" href="/imagem/site/ycon.css">
+	<link rel="stylesheet" href="/css/site.css">
+	<script type="text/javascript" src="/library/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/library/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/library/easing/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.min.js"></script>
+	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.swipe.min.js"></script>
+	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.scrollVert.min.js"></script>
+	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.carousel.min.js"></script>
+	<script type="text/javascript" src="/library/skrollr/skrollr.min.js"></script>
+	<script type="text/javascript" src="/library/skrollr/skrollr.menu.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap_site.js"></script>
+	<!-- GMAPS START -->
+	<style type="text/css">
+	html { height: 100%; }
+	body { height: 100%; margin: 0px; padding: 0px; }
+	#mapa-augusto-montenegro { height: 100%; }
+	#mapa-alcindo-cacela { height: 100%; }
+	</style>
+	<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+	function initialize(Lat, Lon, obj) {
+		var myLatlng = new google.maps.LatLng(Lat, Lon);
+		var myOptions = {
+			zoom: 16,
+			center: myLatlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById(obj), myOptions);
+
+		var image = '/_assets/images/site/marker.png';
+		var beachMarker = new google.maps.Marker({
+			position: myLatlng,
+		map: map/*,
+		icon: image*/
+	});
+
+		google.maps.event.addListener(beachMarker, 'click', function() {
+			infowindow.open(map, beachMarker);
+		});
+	}
+
+	$(function() {
+		initialize(
+			$("#mapa-localizacao").data("lat"), $("#mapa-localizacao").data("lon"), $("#mapa-localizacao").attr("id")
+			);
+	});
+	</script>
+	<!-- GMAPS END -->
+</head>
+<body class="home">
+	<a href="#content" class="sr-only">Ir para o conteúdo</a>
+	<div class="extra-geral">
+		<div class="site-geral">
+			<header class="extra-header">
+				<div class="site-header">
+					<div class="container">
+						<span class="telefone">
+							<img src="/imagem/site/telefone.png" alt="Telefone: 91 98040 8041">
+						</span>
+						<nav class="navbar navbar-default" role="navigation">
+							<ul class="nav navbar-nav menu-left">
+								<li><a href="#SOBRE" data-menu-duration="1000">Sobre</a></li>
+								<li><a href="#CARDAPIO" data-menu-duration="1000">Cardápio</a></li>
+							</ul>
+							<div class="navbar-header">
+								<span class="navbar-brand"><img src="/imagem/site/miau-espetos.png" alt="Logo Miau Espetos"></span>
+							</div>
+							<ul class="nav navbar-nav menu-right">
+								<li><a href="#PROMOCOES" data-menu-duration="1500">Promoções</a></li>
+								<li><a href="#CONTATO" data-menu-duration="2000">Contato</a></li>
+							</ul>
+						</nav>
+					</div> <!-- .container -->
+				</div> <!-- .site-header -->
+			</header> <!-- .extra-header -->
+			<div class="extra-central">
+				<div class="site-central" id="content">
+					<div class="page box-home" id="PAGE-HOME" data-bottom-top="background-position: 50% 20%;" data-top-bottom="background-position: 50% -120%;" data-anchor-target="#PAGE-HOME">
+						<a name="HOME" id="HOME"></a>
+						<div class="bg"></div> <!-- .bg -->
+						<div class="container">
+							<div class="box-banner">
+								<ul class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-speed="1800" data-cycle-slides="> li" data-cycle-pager=".box-banner .cycle-nav" data-cycle-next=".box-banner .cycle-next" data-cycle-prev=".box-banner .cycle-prev" data-cycle-easing="easeInOutExpo" data-cycle-log="false">
+									<li>
+										<div class="content">
+											<a href="#" class="link">
+												<span class="mask"></span>
+												<span class="imagem"><img src="/imagem/site/banner/pao-de-alho.jpg" alt="Pão de alho"></span>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="content">
+											<a href="#" class="link">
+												<span class="mask"></span>
+												<span class="imagem"><img src="/imagem/site/banner/espeto-do-dia.jpg" alt="Espeto do dia"></span>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="content">
+											<a href="#" class="link">
+												<span class="mask"></span>
+												<span class="imagem"><img src="/imagem/site/banner/happy-hour.jpg" alt="Happy Hour"></span>
+											</a>
+										</div>
+									</li>
+								</ul>
+								<div class="cycle-nav"></div> <!-- .cycle-nav -->
+							</div> <!-- .box-banner -->
+						</div> <!-- .container -->
+					</div> <!-- .box-home -->
+					<div class="page box-sobre" id="PAGE-SOBRE" data-bottom-top="background-position:50% 500%" data-center="background-position:50% 0%" data-anchor-target="#PAGE-SOBRE">
+						<div class="bg" data-bottom-top="bottom: -834px;" data-center="bottom: -134px;" data-anchor-target="#PAGE-SOBRE"></div> <!-- .bg -->
+						<a name="SOBRE" id="SOBRE"></a>
+						<div class="container">
+							<div class="row" data-bottom-top="margin-top:300px;opacity: 0;" data-center="margin-top:0;opacity: 1;" data-anchor-target="#PAGE-SOBRE">
+								<div class="col-xs-6 page-left">
+									<div class="content">
+										<h2 class="media-heading sr-only">O Miau</h2>
+										<div class="sobre-desc">
+											Você escolhe: almoço a quilo ou jantar a lá carte,
+											churrasco suculento e saborosíssimo!!! <br>
+											Experimente!
+										</div> <!-- .sobre-desc -->
+									</div> <!-- .content -->
+								</div> <!-- .col-xs-6 -->
+								<div class="col-xs-6 page-right">
+									<h2 class="media-heading sr-only">Onde fica?</h2>
+									<a class="onde-fica" data-toggle="modal" href="#modal-localizacao" title="Clique e veja o mapa ampliado">Clique e veja onde estamos</a>
+									
+								</div> <!-- .col-xs-6 -->
+							</div>
+						</div> <!-- .container -->
+					</div> <!-- .box-sobre -->
+					<div class="page box-cardapio" id="PAGE-CARDAPIO" data-bottom-top="background-position:50% -700%" data-center="background-position:50% 0%" data-anchor-target="#PAGE-CARDAPIO">
+						<div class="bg" data-bottom-top="bottom: -634px;" data-center="bottom: -134px;" data-anchor-target="#PAGE-CARDAPIO"></div> <!-- .bg -->
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-10 col-xs-offset-1" data-500-top="margin-top:300px;opacity: 0;" data-center="margin-top:0;opacity: 1;" data-anchor-target="#PAGE-CARDAPIO">
+									<a name="CARDAPIO" id="CARDAPIO" data-menu-offset="-400"></a>
+									<h2 class="media-heading">Nosso cardápio</h2>
+									<p class="page-desc">
+										Você escolhe: almoço a quilo ou jantar a lá carte, churrasco suculento! Experimente!
+									</p>
+									<ul class="lista-cardapio clearfix">
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-entradas" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/entradas.jpg" alt="Entradas"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Entradas</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-grelhados" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/grelhados.jpg" alt="Grelhados"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Grelhados</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-petiscos" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/petiscos.jpg" alt="Petiscos"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Petiscos</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-espetos" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/espetos.jpg" alt="Espetos"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Espetos</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-sobremesas" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/sobremesas.jpg" alt="Sobremesas"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Sobremesas</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+										<li>
+											<a class="link" data-toggle="modal" href="#cardapio-sucos" title="Veja mais detalhes">
+												<span class="mask"></span>
+												<span class="content">
+													<span class="imagem"><img src="/imagem/site/cardapio/sucos.jpg" alt="Sucos"></span>
+													<span class="bg"></span>
+													<span class="text">
+														<span class="text-content">
+															<span class="title">Bebidas</span>
+															<span class="ycon-plus plus"></span>
+														</span>
+														<span class="space"></span>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div> <!-- .col-xs-10 -->
+							</div> <!-- .row -->
+						</div> <!-- .container -->
+					</div> <!-- .box-cardapio -->
+					<div class="page box-promocoes" id="PAGE-PROMOCOES" data-bottom-top="background-position:50% -60%" data-center="background-position:50% 0%" data-anchor-target="#PAGE-PROMOCOES">
+						<div class="bg"></div> <!-- .bg -->
+						<div class="container">
+							<a name="PROMOCOES" id="PROMOCOES"></a>
+							<h2 class="h1 media-heading">Promoções</h2>
+							<div class="box-cycle">
+								<a href="javascript:void(0);" class="cycle-prev"><span class="sr-only">Anterior</span><span class="ycon-cycle-prev"></span></a>
+								<a href="javascript:void(0);" class="cycle-next"><span class="sr-only">Próximo</span><span class="ycon-cycle-next"></span></a>
+								<div class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="5000" data-cycle-speed="1800" data-cycle-slides="> li" data-cycle-pager=".box-promocoes .box-cycle .cycle-nav" data-cycle-next=".box-promocoes .box-cycle .cycle-next" data-cycle-prev=".box-promocoes .box-cycle .cycle-prev" data-cycle-easing="easeInOutExpo" data-cycle-log="false" data-allow-wrap="false"data-cycle-carousel-visible="3">
+									<li>
+										<div class="content">
+											<div class="imagem">
+												<span class="imagem-content"><img src="/imagem/site/promocao/quarta-e-nossa.png" alt=""></span>
+												<span class="space"></span>
+											</div>
+											<div class="desc">
+												<div class="title sr-only">Quarta é nossa!</div>
+												Você compra três heineken / Brahma e a quarta é por nossa conta!
+											</div> <!-- .desc -->
+										</div> <!-- .content -->
+									</li>
+									<li>
+										<div class="content">
+											<div class="imagem">
+												<span class="imagem-content"><img src="/imagem/site/promocao/espeto-dobro.png" alt=""></span>
+												<span class="space"></span>
+											</div>
+											<div class="desc">
+												<div class="title sr-only">Espeto em dobro</div>
+												Você compra três heineken / Brahma e a quarta é por nossa conta!
+											</div> <!-- .desc -->
+										</div> <!-- .content -->
+									</li>
+									<li>
+										<div class="content">
+											<div class="imagem">
+												<span class="imagem-content"><img src="/imagem/site/promocao/rodizio-de-espeto.png" alt=""></span>
+												<span class="space"></span>
+											</div>
+											<div class="desc">
+												<div class="title sr-only">Rodízio de espeto</div>
+												Você compra três heineken / Brahma e a quarta é por nossa conta!
+											</div> <!-- .desc -->
+										</div> <!-- .content -->
+									</li>
+									<li>
+										<div class="content">
+											<div class="imagem">
+												<span class="imagem-content"><img src="/imagem/site/promocao/happy-hour.png" alt=""></span>
+												<span class="space"></span>
+											</div>
+											<div class="desc">
+												<div class="title sr-only">Happy hour</div>
+												Você compra três heineken / Brahma e a quarta é por nossa conta!
+											</div> <!-- .desc -->
+										</div> <!-- .content -->
+									</li>
+								</div>
+							</div>
+						</div> <!-- .container -->
+					</div> <!-- .box-promocoes -->
+					<div class="page box-contato" id="PAGE-CONTATO" data-bottom-top="background-position:50% -100%" data-center="background-position:50% 0%" data-anchor-target="#PAGE-CONTATO">
+						<div class="bg">
+						</div> <!-- .bg -->
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-6 page-left">
+									<a name="CONTATO" id="CONTATO"></a>
+									<h2 class="h1 media-heading">Fale com<br> a gente</h2>
+									<ul class="media-list">
+										<li class="media line-phone">
+											<span class="pull-left"><span class="ycon-phone"></span></span>
+											<div class="media-body">
+												91 3236 1682<br>
+												91 98223 0983
+											</div>
+										</li>
+										<li class="media line-address">
+											<span class="pull-left"><span class="ycon-marker"></span></span>
+											<div class="media-body">
+												<p>
+													Av Duque de Caxias, 834<br> 
+													marco - Belem/Pa
+												</p>
+												<p class="hora">
+													<small>Seg. à Sex:</small><br>
+													18h30 às 00h
+												</p>
+												<p class="hora">
+													<small>Sábados e Domingos:</small><br>
+													12h às 15h <span class="blue">e</span> 18h30 às 00h
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div> <!-- .col-xs-6 -->
+								<div class="col-xs-6 page-right">
+									<form action="">
+										<div class="balao">
+											<div class="extra-1">
+												<div class="extra-2 clearfix">
+													<div class="form-group">
+														<label class="sr-only">Escreva o que você deseja...</label>
+														<textarea name="" id="" rows="2" class="form-control" placeholder="Escreva o que você deseja"></textarea>
+													</div> <!-- .form-group -->
+													<div class="form-group">
+														<label class="sr-only">Digite seu nome</label>
+														<input type="text" class="form-control" placeholder="Digite seu nome" />
+													</div> <!-- .form-group -->
+													<div class="row">
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="sr-only">Telefone</label>
+																<input type="text" class="form-control" placeholder="Telefone" />
+															</div> <!-- .form-group -->
+														</div> <!-- .col-xs-6 -->
+														<div class="col-xs-6">
+															<div class="form-group">
+																<label class="sr-only">E-mail</label>
+																<input type="text" class="form-control" placeholder="E-mail" />
+															</div> <!-- .form-group -->
+														</div> <!-- .col-xs-6 -->
+													</div> <!-- .row -->
+												</div> <!-- .extra-2 -->
+												<button class="ycon-enviar"><span class="sr-only">Enviar</span></button>
+											</div> <!-- .extra-1 -->
+										</div> <!-- .balao -->
+									</form>
+									<div class="row">
+										<div class="col-xs-5">
+										</div> <!-- .col-xs-5 -->
+										<div class="col-xs-3">
+											<span class="footer-header">Navegue</span>
+											<ul class="menu-footer">
+												<li><a href="#HOME" data-menu-duration="2500">Home</a></li>
+												<li><a href="#SOBRE" data-menu-duration="2500">Sobre</a></li>
+												<li><a href="#CARDAPIO" data-menu-duration="2000">Cardápio</a></li>
+												<li><a href="#PROMOCOES" data-menu-duration="1500">Promoções</a></li>
+												<li><a href="#CONTATO" data-menu-duration="1000">Contato</a></li>
+											</ul>
+										</div> <!-- .col-xs-3 -->
+										<div class="col-xs-4">
+											<div class="social-footer">
+												<a href="https://www.facebook.com/miauespetosbel" title="Acesse nosso Facebook" target="_blank"><span class="sr-only">Facebook</span><span class="ycon-facebook"></span></a>
+												<a href="https://twitter.com/miauespetos" title="Acesse nosso Twitter" target="_blank"><span class="sr-only">Twitter</span><span class="ycon-twitter"></span></a>
+												<a href="https://instagram.com/miauespetos/" title="Acesse nosso Instagram" target="_blank"><span class="sr-only">Instagram</span><span class="ycon-instagram"></span></a>
+											</div> <!-- .social-footer -->
+										</div> <!-- .col-xs-4 -->
+									</div> <!-- .row -->
+								</div> <!-- .col-xs-6 -->
+							</div> <!-- .row -->
+							<span class="ycon-mascote-footer mascote"></span>
+						</div> <!-- .container -->
+					</div> <!-- .box-contato -->
+				</div> <!-- .site-central -->
+			</div> <!-- .site-central -->
+		</div> <!-- .extra-central -->
+		<footer>
+			<div class="extra-footer">
+				<div class="site-footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-6">
+								© Todos os direitos reservados 
+							</div> <!-- .col-xs-6 -->
+							<div class="col-xs-6 text-right">
+								<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design"><img src="/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
+							</div> <!-- .col-xs-6 -->
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- .site-footer -->
+			</div> <!-- .extra-footer -->
+		</footer>
+	</div> <!-- .site-geral -->
+</div> <!-- .extra-geral -->
+<div class="modal fade modal-cardapio" id="cardapio-entradas">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Entradas</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-cardapio" id="cardapio-grelhados">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Grelhados</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-cardapio" id="cardapio-petiscos">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Petiscos</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-cardapio" id="cardapio-espetos">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Espetos</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-cardapio" id="cardapio-sobremesas">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Sobremesas</h4>
+			</div>
+			<div class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div class="modal fade modal-cardapio" id="cardapio-sucos">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Cardápio - Bebidas</h4>
+			</div>
+			<div class="modal-body">
+				<ul class="media-list">
+					<li class="media">
+						<div class="media-body">
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Suco <small>R$ 4,00</small></h5>
+									<p>
+										Abacaxi / abacaxi com hortelã / goiaba / maracujá / acerola / graviola / cupuaçu / uva
+									</p>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Adicional de leite <small>R$ 1,30</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">H2OH <small>R$ 3,50</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Refrigerante KS <small>R$ 3,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Água 300ml <small>R$ 2,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Whisky Black Label <small>R$ 15,00 a dose</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Caipiroska <small>R$ 9,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Caipirinha <small>R$ 7,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Campari <small>R$ 7,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Stella Artois <small>R$ 6,50</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Chopp Heineken <small>R$ 5,95</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+							<li class="media">
+								<div class="media-body">
+									<h5 class="media-heading">Long necks <small>R$ 5,00</small></h5>
+								</div> <!-- .media-body -->
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div class="modal fade" id="modal-localizacao">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title">Onde fica?</h4>
+					</div>
+					<div class="modal-body">
+						<p>
+							Av Duque de Caxias, 834
+						</p>
+						<div id="mapa-localizacao" class="" style="width:100%; height:400px" data-lat="-1.439172" data-lon="-48.467623"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Voltar ao site</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script>
+		jQuery(document).ready(function(){
+			$('#modal-localizacao').on('shown.bs.modal', function (e) {
+				initialize($("#mapa-localizacao").data("lat"), $("#mapa-localizacao").data("lon"), $("#mapa-localizacao").attr("id"));
+			})
+
+			$('.lista-cardapio').find('.link').hover(function () {
+				$(this).find('.bg').stop(true, true).delay(100).fadeIn({duration: 600, queue: true, easing: 'easeInOutExpo'});
+				$(this).find('.plus').stop(true, true).delay(100).animate({opacity: 1, height: '66px'}, {duration: 600, queue: true, easing: 'easeInOutExpo'});
+			}, function () {
+				$(this).find('.bg').stop(true, true).delay(100).fadeOut({duration: 600, queue: true, easing: 'easeInOutExpo'});
+				$(this).find('.plus').stop(true, true).delay(100).animate({opacity: 0, height: 0}, {duration: 600, queue: true, easing: 'easeInOutExpo'});
+			});
+		});
+		</script>
+	</body>
+	</html>
